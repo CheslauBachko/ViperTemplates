@@ -1,0 +1,4 @@
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImmediateAnimationController.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OnDeallocateX.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TransparentProxyViewController.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ViperMcFlurrySwift.framework

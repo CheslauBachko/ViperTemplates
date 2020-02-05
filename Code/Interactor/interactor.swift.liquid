@@ -1,0 +1,24 @@
+{% include 'header' %}
+
+class {{ prefix }}{{ module_info.name }}Interactor: {{ prefix }}{{ module_info.name }}InteractorInput {
+
+    // MARK: - VIPER Vars
+
+    weak var output: {{ prefix }}{{ module_info.name }}InteractorOutput!
+
+    // MARK: - Vars
+    
+    {% if custom_parameters.extended_configure %}private final var config: {{ prefix }}{{ module_info.name }}ModuleInputConfig!{% endif %}
+
+    // MARK: - {{ prefix }}{{ module_info.name }}InteractorInput
+    
+    {% if custom_parameters.extended_configure %}func configure(with config: {{ prefix }}{{ module_info.name }}ModuleInputConfig) {
+        assert(self.config == nil)
+        self.config = config
+    }
+    {% else %}func configure() {
+    }{% endif %}
+
+    func deinitialize() {
+    }
+}

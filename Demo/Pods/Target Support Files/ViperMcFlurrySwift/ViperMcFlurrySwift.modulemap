@@ -1,0 +1,6 @@
+framework module ViperMcFlurrySwift {
+  umbrella header "ViperMcFlurrySwift-umbrella.h"
+
+  export *
+  module * { export * }
+}

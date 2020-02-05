@@ -1,0 +1,60 @@
+{% include 'header' %}
+
+import Foundation
+import ViperMcFlurrySwift
+
+fileprivate enum {{ prefix }}{{ module_info.name }}PresenterState {
+    case initial
+    case ready
+    case deinitialized
+}
+
+class {{ prefix }}{{ module_info.name }}Presenter: {{ prefix }}{{ module_info.name }}ModuleInput, {{ prefix }}{{ module_info.name }}ViewOutput, {{ prefix }}{{ module_info.name }}InteractorOutput, ViperModuleOutput {
+
+    // MARK: - VIPER Vars
+
+    weak var view: {{ prefix }}{{ module_info.name }}ViewInput!
+    var interactor: {{ prefix }}{{ module_info.name }}InteractorInput!
+    var router: {{ prefix }}{{ module_info.name }}RouterInput!
+    weak var output: {{ prefix }}{{module_info.name}}ModuleOutput?
+    private final var state: {{ prefix }}{{ module_info.name }}PresenterState = .initial
+
+    // MARK: - Vars
+
+    {% if custom_parameters.extended_configure %}private final var config: {{ prefix }}{{ module_info.name }}ModuleInputConfig!{% else %}// TODO: Place your code here{% endif %}
+
+    // MARK: - Life cycle
+
+    func willDeinit() {
+        if state == .ready {
+            interactor.deinitialize()
+        }
+        state = .deinitialized
+    }
+
+    // MARK: - RamblerViperModuleInput
+
+    func setModuleOutput(_ moduleOutput: ViperModuleOutput) {
+        output = moduleOutput as? {{ prefix }}{{module_info.name}}ModuleOutput
+    }
+
+    // MARK: - {{ prefix }}{{module_info.name}}ViewOutput
+
+    func viewIsReady() {
+        assert(state == .ready)
+    }
+
+    // MARK: - {{ prefix }}{{module_info.name}}ModuleInput
+
+    {% if custom_parameters.extended_configure %}func configure(with config: {{ prefix }}{{ module_info.name }}ModuleInputConfig) {% else %}func configure() {% endif %}{
+        assert(state == .initial)
+        state = .ready
+        {% if custom_parameters.extended_configure %}
+        self.config = config
+        interactor.configure(with: config)
+        {% else %}interactor.configure(){% endif %}
+    }
+
+    // MARK: - {{ prefix }}{{ module_info.name }}InteractorOutput
+
+}

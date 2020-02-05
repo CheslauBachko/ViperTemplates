@@ -1,0 +1,29 @@
+{
+  "name": "ViperMcFlurrySwift",
+  "version": "1.0.0",
+  "summary": "A short description of ViperMcFlurrySwift.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/CheslauBachko/ViperMcFlurrySwift",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Cheslau Bachko": "cheslau.bachko@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/CheslauBachko/ViperMcFlurrySwift.git",
+    "tag": "1.0.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "swift_versions": [
+    "4.0",
+    "4.2",
+    "5.0",
+    "5.1"
+  ],
+  "source_files": "Source/**/*",
+  "swift_version": "5.1"
+}

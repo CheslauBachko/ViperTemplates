@@ -1,0 +1,8 @@
+{% include 'header' %}
+
+import ViperMcFlurrySwift
+
+protocol {{ prefix }}{{ module_info.name }}ModuleInput: ViperModuleInput {
+    func configure(with config: {{ prefix }}{{ module_info.name }}ModuleInputConfig)
+}
+

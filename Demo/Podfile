@@ -1,0 +1,19 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Demo' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  pod 'TransparentProxyViewController'
+  pod 'ViperMcFlurrySwift', :git => 'git@github.com:CheslauBachko/ViperMcFlurrySwift.git', :branch => 'master'
+  pod 'OnDeallocateX'
+
+
+  target 'DemoTests' do
+      inherit! :search_paths
+      pod 'TransparentProxyViewController'
+      pod 'ViperMcFlurrySwift', :git => 'git@github.com:CheslauBachko/ViperMcFlurrySwift.git', :branch => 'master'
+      pod 'OnDeallocateX'
+
+  end
+end

@@ -1,0 +1,6 @@
+framework module ImmediateAnimationController {
+  umbrella header "ImmediateAnimationController-umbrella.h"
+
+  export *
+  module * { export * }
+}

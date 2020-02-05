@@ -1,0 +1,49 @@
+{% include 'header' %}
+
+import XCTest
+
+class {{ prefix }}{{ module_info.name }}PresenterTest: XCTestCase {
+
+    override func setUp() {
+        super.setUp()
+        // Put setup code here. This method is called before the invocation of each test method in the class.
+    }
+
+    override func tearDown() {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        super.tearDown()
+    }
+
+    class MockInteractor: {{ prefix }}{{ module_info.name }}InteractorInput {
+
+        // MARK: - Vars
+        // TODO: Place your code here
+
+        // MARK: - {{ prefix }}{{ module_info.name }}InteractorInput
+        
+        {% if custom_parameters.extended_configure %}func configure(with config: {{ prefix }}{{ module_info.name }}ModuleInputConfig) {
+        }{% else %}func configure() {
+        }{% endif %}
+
+    }
+
+    class MockRouter: {{ prefix }}{{ module_info.name }}RouterInput {
+
+        // MARK: - Vars
+        // TODO: Place your code here
+
+        // MARK: - {{ prefix }}{{ module_info.name }}RouterInput
+        // TODO: Place your code here
+
+    }
+
+    class MockViewController: {{ prefix }}{{ module_info.name }}ViewInput {
+
+        // MARK: - Vars
+        // TODO: Place your code here
+
+        // MARK: - {{ prefix }}{{ module_info.name }}ViewInput
+        // TODO: Place your code here
+
+    }
+}

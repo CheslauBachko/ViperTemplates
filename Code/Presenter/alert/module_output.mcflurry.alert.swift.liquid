@@ -1,0 +1,7 @@
+{% include 'header' %}
+
+import ViperMcFlurrySwift
+
+protocol {{ prefix }}{{ module_info.name }}ModuleOutput: ViperModuleOutput {
+    func {{ prefix | downcase }}{{ module_info.name | downcase }}ModuleDidDismiss()
+}

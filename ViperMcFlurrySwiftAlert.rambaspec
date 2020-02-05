@@ -1,0 +1,53 @@
+# Template information section
+name: "ViperMcFlurrySwiftAlert"
+summary: "Swift VIPER module template with TransparentProxyViewController playing as a View and UIAlertController."
+author: "Siarhei Ladzeika"
+version: "1.8.2"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+# View layer
+- {name: View/ViewInput.swift,  path: Code/View/alert/view_input.alert.swift.liquid}
+- {name: View/ViewOutput.swift, path: Code/View/alert/view_output.alert.swift.liquid}
+- {name: View/ViewController.swift, path: Code/View/alert/view_controller.alert.swift.liquid}
+
+# Presenter layer
+- {name: Presenter/Helpers/ModuleConfig.swift, path: Code/Helpers/moduleinputconfig.alert.swift.liquid}
+- {name: Presenter/ModuleInput.swift, path: Code/Presenter/alert/module_input.mcflurry.alert.swift.liquid}
+- {name: Presenter/ModuleOutput.swift, path: Code/Presenter/alert/module_output.mcflurry.alert.swift.liquid}
+- {name: Presenter/Presenter.swift, path: Code/Presenter/alert/presenter.mcflurry.alert.swift.liquid}
+
+# Interactor layer
+- {name: Interactor/InteractorInput.swift, path: Code/Interactor/interactor_input.swift.liquid}
+- {name: Interactor/InteractorOutput.swift, path: Code/Interactor/interactor_output.swift.liquid}
+- {name: Interactor/Interactor.swift, path: Code/Interactor/interactor.swift.liquid}
+
+# Router layer
+- {name: Router/RouterInput.swift, path: Code/Router/alert/router_input.mcflurry.alert.swift.liquid}
+- {name: Router/Router.swift, path: Code/Router/alert/router.mcflurry.alert.swift.liquid}
+
+# Configurator
+- {name: Configurator/Configurator.swift, path: Code/Configurator/configurator.mcflurry.swift.liquid}
+{% if custom_parameters.extended_configurator_create != 'true' %}
+- {name: Configurator/Initializer.swift, path: Code/Configurator/initializer.swift.liquid}
+{% endif %}
+
+# The declarations for test files
+test_files:
+
+# Configurators tests
+- {name: Configurator/ConfiguratorTests.swift, path: Tests/Configurator/alert/configurator_tests.mcflurry.alert.swift.liquid}
+
+# View tests
+- {name: View/ViewTests.swift, path: Tests/View/view_tests.swift.liquid}
+
+# Interactor tests
+- {name: Interactor/InteractorTests.swift, path: Tests/Interactor/interactor_tests.swift.liquid}
+
+# Presenter tests
+- {name: Presenter/PresenterTests.swift, path: Tests/Presenter/alert/presenter_tests.alert.swift.liquid}
+
+# Router tests
+- {name: Router/RouterTests.swift, path: Tests/Router/router_tests.swift.liquid}

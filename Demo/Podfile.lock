@@ -1,0 +1,37 @@
+PODS:
+  - ImmediateAnimationController (1.0.4)
+  - OnDeallocateX (1.0.0)
+  - TransparentProxyViewController (1.0.0):
+    - ImmediateAnimationController
+  - ViperMcFlurrySwift (1.0.0)
+
+DEPENDENCIES:
+  - OnDeallocateX
+  - TransparentProxyViewController
+  - "ViperMcFlurrySwift (from `git@github.com:CheslauBachko/ViperMcFlurrySwift.git`, branch `master`)"
+
+SPEC REPOS:
+  trunk:
+    - ImmediateAnimationController
+    - OnDeallocateX
+    - TransparentProxyViewController
+
+EXTERNAL SOURCES:
+  ViperMcFlurrySwift:
+    :branch: master
+    :git: "git@github.com:CheslauBachko/ViperMcFlurrySwift.git"
+
+CHECKOUT OPTIONS:
+  ViperMcFlurrySwift:
+    :commit: 733839b060f4ed1b608ab7047435ba5f9eefbace
+    :git: "git@github.com:CheslauBachko/ViperMcFlurrySwift.git"
+
+SPEC CHECKSUMS:
+  ImmediateAnimationController: 2611c4a900e5da852e634ef13dee4db6751ca432
+  OnDeallocateX: b82c694cf591690d71419e9b23e55050e5ff03c6
+  TransparentProxyViewController: 7a441a763a668a9fd39cb12d4ccc9734d27f4543
+  ViperMcFlurrySwift: 079e49b8013e5bde66b7e631e8e552345999bba3
+
+PODFILE CHECKSUM: 7daa4724680f41b1ba2f3d0a34df3b2d8f55adf1
+
+COCOAPODS: 1.8.4

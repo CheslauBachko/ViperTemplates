@@ -1,0 +1,26 @@
+{% include 'header' %}
+
+import XCTest
+
+class {{ prefix }}{{ module_info.name }}InteractorTests: XCTestCase {
+
+    override func setUp() {
+        super.setUp()
+        // Put setup code here. This method is called before the invocation of each test method in the class.
+    }
+
+    override func tearDown() {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        super.tearDown()
+    }
+
+    class MockPresenter: {{ prefix }}{{ module_info.name }}InteractorOutput {
+
+        // MARK: - Vars
+        // TODO: Place your code here
+
+        // MARK: - {{ prefix }}{{ module_info.name }}InteractorOutput
+        // TODO: Place your code here
+
+    }
+}

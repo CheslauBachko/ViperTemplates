@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-DemoTests/Pods-DemoTests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/ImmediateAnimationController/ImmediateAnimationController.framework
+${BUILT_PRODUCTS_DIR}/OnDeallocateX/OnDeallocateX.framework
+${BUILT_PRODUCTS_DIR}/TransparentProxyViewController/TransparentProxyViewController.framework
+${BUILT_PRODUCTS_DIR}/ViperMcFlurrySwift/ViperMcFlurrySwift.framework

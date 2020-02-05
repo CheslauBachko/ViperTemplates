@@ -1,0 +1,6 @@
+framework module TransparentProxyViewController {
+  umbrella header "TransparentProxyViewController-umbrella.h"
+
+  export *
+  module * { export * }
+}
